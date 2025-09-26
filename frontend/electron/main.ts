@@ -36,7 +36,7 @@ const createWindow = () => {
 
 const startNextJSServer = async () => {
   try {
-    const nextJSPort = await getPort({ portRange: [30_011, 50_000] });
+    const nextJSPort = await getPort({ portRange: [30011, 50000] });
     const webDir = join(app.getAppPath(), "app");
 
     await startServer({
