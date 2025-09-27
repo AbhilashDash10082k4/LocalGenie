@@ -73,4 +73,6 @@ npm run dev
 # Run Tauri desktop app
 npm run tauri dev
 ```
-##Visit the website here - https://cognisync-nexus.lovable.app/
+
+**Visit the website here** - https://cognisync-nexus.lovable.app/
+
