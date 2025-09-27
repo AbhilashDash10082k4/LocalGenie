@@ -1,78 +1,73 @@
-# Multimodal Offline RAG System
+# Welcome to your Lovable project
 
-## 📌 Overview
-This project is a **Multimodal Retrieval-Augmented Generation (RAG) system** designed to run fully **offline**.  
-It can ingest, index, and query **documents (DOCX/PDF), images, and audio recordings** within a unified semantic retrieval framework.  
-Powered by **LangChain + LangGraph** for orchestration and **Hugging Face offline models**, the system provides a seamless, citation-grounded query interface packaged as a **desktop application via Tauri**.
+## Project info
 
----
+**URL**: https://lovable.dev/projects/2e8831bd-c55d-4d4a-b98c-9fb255d0305a
 
-## 🏗️ Architecture
+## How can I edit this code?
 
-### Frontend (UI Layer)
-- **Framework**: Next.js + React
-- **Features**:
-  - Chat-style query interface
-  - File upload (DOCX, PDF, images, audio)
-  - Results display with citations and linked sources
-  - Desktop app packaging via **Tauri**
+There are several ways of editing your application.
 
-### Backend (Orchestration & Retrieval)
-- **LangChain + LangGraph** → Pipeline orchestration  
-- **Vector Store** → ChromaDB (local mode)  
-- **Data Ingestion**:
-  - **DOCX/PDF**: Extract text with `unstructured` / `PyMuPDF`
-  - **Images**: Encode using CLIP embeddings
-  - **Audio**: Transcribe via Whisper.cpp
-- **Offline LLMs**: Hugging Face (LLaMA-2, Mistral, Phi-3, etc., quantized for CPU/GPU)
+**Use Lovable**
 
-### Workflow
-1. User uploads/query → handled in **Next.js UI**  
-2. Files processed → embeddings generated per modality  
-3. Data indexed → stored in FAISS/ChromaDB  
-4. Query passed to **LangGraph pipeline**:
-   - Retrieve top-k results
-   - Feed into LLM with grounding context
-   - Generate citation-rich answer  
-5. Result returned to frontend with **expandable source links**
+Simply visit the [Lovable Project](https://lovable.dev/projects/2e8831bd-c55d-4d4a-b98c-9fb255d0305a) and start prompting.
 
----
+Changes made via Lovable will be committed automatically to this repo.
 
-## 🛠️ Tech Stack
-- **Frontend/UI**: Tauri + Next.js (React)  
-- **Backend**: Next.js API routes + LangChain + LangGraph  
-- **LLMs (Offline)**: Hugging Face (`transformers`, `llama.cpp`)  
-- **Embeddings**: Sentence Transformers, CLIP  
-- **Audio Processing**: Whisper.cpp  
-- **Vector DB**: ChromaDB  
-- **PDF/DOCX Parsing**: Unstructured, pdf-parser
+**Use your preferred IDE**
 
----
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-## 🚀 Features
-- **Unified multimodal ingestion**: PDFs, DOCX, Images, Audio  
-- **Offline semantic search** across modalities  
-- **Chat-based query interface**  
-- **Citation transparency** → Expand to view original context  
-- **Runs fully offline** (no external API calls)  
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
----
+Follow these steps:
 
-## 📦 Installation & Run
-```bash
-# Clone repo
-git clone https://github.com/AbhilashDash10082k4/LocalGenie.git
-cd LocalGenie
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-# Install dependencies
-npm install
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-# Run Next.js dev server
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-
-# Run Tauri desktop app
-npm run tauri dev
 ```
 
-**Visit the website here** - https://cognisync-nexus.lovable.app/
+**Edit a file directly in GitHub**
 
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/2e8831bd-c55d-4d4a-b98c-9fb255d0305a) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
